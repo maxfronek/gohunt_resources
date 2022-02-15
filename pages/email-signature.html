@@ -18,7 +18,9 @@
     --colorText: #404040;
     --colorBrandHero: #f37735;
     --colorBrandHeroHover: #DB6B30;
-    --colorLine: #E3E3E3;
+    --colorLine: #424C42;
+    --colorBrandHazel: #A99766;
+    --colorNegative: #FF3B30;
 
     --fontMain: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -26,36 +28,49 @@
 @keyframes pulse {
   0% {
     opacity: .5;
+    color: var(--colorText);
   }
   
   70% {
     opacity: 1;
+    color: var(--colorBrandHazel);
   }
   
   100% {
     opacity: .5;
+    color: var(--colorText);
   }
 }
 
 
     html {font-size: 16px;}
-    body {padding-top: 4rem; padding-bottom: 6rem; background-color: var(--colorBackgroundSecondary); color: var(--colorText);}
+    body {padding: 4rem 2rem 6rem; background-color: var(--colorBackgroundSecondary); color: var(--colorText);}
+    h2 {font-size: 1.6rem;}
+    h3 {font-size: 1.25em;}
+    h4 {font-size: 1rem;}
     body, p, ol, ul span {font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 1rem; line-height: 1.5;}
     .pre-container, .post-container {font-weight: 800; margin-bottom: 0px;font-size: 16px; letter-spacing: -0.3px; margin: 0 auto; max-width: calc(600px + 4rem); text-align: left; color: var(--colorText);}
+    :not(.container) p {max-width: 600px;}
     /* .pre-container:not(:first-of-type) {margin-top: 8rem;} */
     .pre-container {border-bottom: 2px solid var(--colorText); padding-bottom: 0.5rem;}
     .pre-container h2 {margin-bottom: 0;}
     .container {max-width: 600px; margin: 2rem auto; background-color: #FFFFFF; padding: 2rem; box-shadow: 4px 4px 16px rgba(30,30,30,0.16); border-radius: .25rem;}
-
+    .container p, .container span {line-height: 18px;}
+    .container h2 {line-height: 27px;}
     .post-container {text-align: center; padding-left: 0; }
 
     .directions {font-family: var(--fontMain); max-width: calc(600px + 4rem); margin: 4rem auto 0;}
     .directions h2 {margin: 0;}
     .directions ol {margin-bottom: 2rem;}
-    .directions p {font-size: .8rem; opacity: .8; margin-top: .5rem;}
+    .directions li::marker {font-weight: 800;}
+    .directions p {max-width: 550px}
+    .directions p:first-of-type {font-size: .8rem; opacity: .8; margin-top: .5rem;}
+    .directions a {color: var(--colorText); transition: .15s all ease-in-out;}
+    .directions a:hover {opacity: .5;}
 
     .accordion {overflow: hidden;}
-    .accordion__intro {position: relative; border-bottom: 2px solid var(--colorText); padding-bottom: .5rem;}
+    .accordion__intro {position: relative; border-bottom: 2px solid var(--colorText); padding-bottom: .5rem; opacity: .5; transition: .3s all ease-in-out;}
+    .accordion__active .accordion__intro {opacity: 1;}
     .accordion__intro:hover, .accordion__intro h2:hover {cursor: pointer;}
     .accordion__content {max-height: 0; overflow: hidden; will-change: max-height; transition: .5s all ease-in-out; opacity: 0;}
     .accordion__active .accordion__content {opacity: 1;}
@@ -73,8 +88,10 @@
     .night-toggle:hover::before, .night-toggle:focus::before {opacity: 1;} 
     .night-toggle:hover::before, .night-toggle:focus::before {transform: translateY(-50%) translateX(0px) rotate(0deg);}
 
-    .toast {position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(10px); padding: 1rem; background-color: var(--colorText); color: var(--colorBackground); font-family: var(--fontMain); border-radius: 4px; opacity: 0; transition: .3s all ease-in-out; box-shadow: 2px 2px 16px 0 rgba(40,40,40,.2); pointer-events: none;}
-    .toast.show {opacity: 1; transform: translateX(-50%) translateY(0); transition: .3s all ease-in-out; pointer-events: all;}
+    .toast {position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(10px); padding: 1rem; background-color: var(--colorText); color: var(--colorBackground); font-family: var(--fontMain); border-radius: 4px; opacity: 0; transition: .3s all ease-in-out; box-shadow: 2px 2px 16px 0 rgba(40,40,40,.2); pointer-events: none; width: max-content;}
+    .toast.show {opacity: 1; transform: translateX(-50%) translateY(0); transition: .3s all ease-in-out; pointer-events: all; z-index: 999;}
+    .closeToast {font-weight: 800; margin-left: .5rem; display: inline-block; text-decoration: none;transition: .15s all ease-in-out;}
+    .closeToast:hover {color: var(--colorNegative);}
 
     .toast a {color: var(--colorBackground);}
 
@@ -93,8 +110,19 @@
         --colorBackgroundSecondary: #323132;
         --colorText: #fafafa;
         --colorBrandHero: #f37735;
-        --colorLine: #404040;
+        --colorBrandHeroHover: #DB6B30;
+        --colorLine: #424C42;
+        --colorBrandHazel: #A99766;
+        --colorNegative: #FF3B30;
+
+        --fontMain: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         }
+}
+
+@media screen and (min-width: 1400px) {
+    html {font-size: 18px;}
+    body, p, ol, ul span {line-height: 2;}
+    .directions p {max-width: 600px;}
 }
 
 </style>
@@ -109,9 +137,9 @@
 
 
 <div class="pre-container">
-  <h2>Email signature template</h2>
+  <h2>Email signature</h2>
 </div>    
-<div class="container" id="signature">
+<div class="container email-signature-container" id="signature">
 <!-- GOHUNT Email Signature -->
 <hr style="width: 200px; border: 0px solid transparent; height: 2px; background-color: #202020; margin-left: 0;"/>
 <h2 style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; margin-bottom: 0px;font-size: 18px; letter-spacing: -0.3px; color: #404040;'>Your Name</h2>
@@ -132,34 +160,36 @@
 </div>    
 
 <div class="toast" id="copySuccess">
-    Done! Head to your <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail account</a> to set up your signature.
+    Text copied! Now head to your <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail account settings</a> to set up your signature. <a href="#" class="closeToast" onclick="closeToast();">&times;</a>
 </div>
 
 
-<div class="directions accordion">
+<div class="directions accordion" id="scrollme">
     <div class="accordion__intro">
         <h2>How to use this tool</h2>
     </div>
     <div class="accordion__content">
-        <p class="disclaimer">(Note: this will only work on a computer, not a phone or tablet)</p>
+        <p class="disclaimer">(Note: these instructions are for a computer, not a phone or tablet)</p>
         <ol>
-            <li>Click the copy button, then click the link in the notification that appears</li>
-            <li>This will take you to your gmail settings page</li>
+            <li>Click the copy button, then click the link for your <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail settings</a></li>
             <li>Scroll down to the <strong>Signature</strong> section, click "Create New", and name the signature whatever you want</li>
             <li>Paste the signature into the text field on the right</li>
-            <li>Change your name, title, phone number, and email accordingly</li>
-            <li>The GOHUNT address is optional, delete it if you do not want it in your signature</li>
-            <li>Select your new signature as the default for new messages</li>
+            <li>Change your name, title, phone number, and email</li>
+            <li>The GOHUNT address is optional, delete it if you do not want it in your&nbsp;signature</li>
+            <li>Select your new signature as the default for new messages, and check the box next to "Insert signature before quoted text in replies and remove the "--" line that precedes it."</li>
             <li>Scroll to the bottom of the settings page and click "Save Changes"</li>
             <li>Your signature will now be added to new emails you compose</li>
         </ol>
 
-        <h2>Notes:</h2>
+        <h2>Notes on Mobile Applications</h2>
+        <p>Depending on your email use, you may want to set up your signature on your mobile device as well.</p>
             <h3>Gmail App for iPhone</h3>
-            If you use the Gmail app on an iPhone, make sure that "Use mobile signature" is <strong>not</strong> checked in the settings. This will allow your desktop signature to be used when sending mobile emails.
-        <h3>Default Mail App for iPhone</h3>
-        <h3>Gmail App for Android</h3>
-        <h3>Other Mobile Applications</h3>
+                <p>If you use the Gmail app on an iPhone, make sure that "Use mobile signature" is <strong>not</strong> checked in the settings. This will automatically use your default desktop signature when sending mobile emails. Note that you <strong>will not</strong> see the signature while you are drafting your messages on mobile.</p>
+            <h3>Default Mail App for iPhone</h3>
+                <p>You can visit this page on your phone, and copy the signature. Navigate into your phone's settings, select "Email", then select "Signatures". Paste in the content and change the required information as specified above. iPhone signatures are stored as plain text, and will not include the GOHUNT logo.</p>
+            <h3>Gmail App for Android</h3>
+            <h3>Other Mobile Applications</h3>
+                <p>If you're unable to copy and paste from this page directly, stick to the format of having your name in <strong>bold</strong> (and larger letters if possible), followed by your title on a new line. Then your phone number, email address, and GOHUNT.com should appear on the following line, separated by pipe (|) characters.</p>
 </div>
 </div>
 
@@ -168,10 +198,36 @@
 
 <script>
     var toastMessage = document.getElementById('copySuccess');
+
+    var scrollme;
+    scrollme = document.querySelector("#scrollme");
+
+
+    function runScroll() {
+        scrollTo(document.body, scrollme.offsetTop, 300);
+    }
+
+
+    function scrollTo(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
+
+        setTimeout(function() {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop == to) return;
+            scrollTo(element, to, duration - 10);
+        }, 10);
+    }
     
-function toastCopySuccessShow() {
-    toastMessage.classList.add('show');
-}
+    function toastCopySuccessShow() {
+        toastMessage.classList.add('show');
+    }
+
+    function closeToast() {
+        toastMessage.classList.remove('show');
+    }
+
 
 
 function copyText() {
@@ -219,9 +275,10 @@ accordions.forEach((accordion) => {
 		} else {
 			accordions.forEach((accordion) => closeAccordion(accordion));
 			openAccordion(accordion);
+            runScroll();
 		}
 	};
-});
+}); // end accordion function
 
 
 </script>
