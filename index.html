@@ -8,11 +8,13 @@
 <style>
 
 :root {
-    --backgroundColor: #fafafa;
-    --textColor: #292A2B;
-    --accentColor: #F37735;
-    --cardColor: #ececed;
-    --textColorAlt: #a1a1a4;
+    --colorBackground: #f5f5f5;
+    --colorTextPrimary: #404040;
+    --colorBrandHero: #F37735;
+    --colorBrandHazel: #A99766;
+    --colorBackgroundSecondary: #FFFFFF;
+    --colorTextPrimaryAlt: #EBEBEB;
+    --colorLine: #e3e3e3;
 
     --borderRadius: 10px;
 
@@ -26,20 +28,20 @@
 }
 
 html {font-size: var(--fontSizeBody);}
-body {font-family: var(--fontMain); color: var(--textColor); background-color: var(--backgroundColor); display: flex; align-items: center; justify-content: center; line-height: 1.6;}
+body {font-family: var(--fontMain); color: var(--colorTextPrimary); background-color: var(--colorBackground); display: flex; align-items: center; justify-content: center; line-height: 1.6;}
 
-h1, h2, h3, h4, h5, h6 {margin: 0 0 1rem; font-kerning: auto;}
+h1, h2, h3, h4, h5, h6 {margin: 0 0 1rem; font-kerning: auto; font-weight: 800;}
 
 h1 {font-size: 2.6rem; letter-spacing: -0.05rem; font-family: var(--fontMain); font-weight: 700;}
 h2 {font-size: 1rem; letter-spacing: 0.25rem;  font-family: var(--fontHeading); text-transform: uppercase;}
-a {text-decoration: none; color: var(--textColor); font-weight: 600; transition: .15s all var(--easeInQuint);}
+a {text-decoration: none; color: var(--colorTextPrimary); font-weight: 600; transition: .15s all var(--easeInQuint);}
 a:hover, a:focus {opacity: 1;}
 
 /* special links */
 a.logo {width: 75px; margin: 0 0 2rem auto;}
 a.logo:hover, a.logo:focus {opacity: 1;}
 
-h2 a {color: var(--textColorAlt);}
+h2 a {color: var(--colorTextPrimaryAlt);}
 
 main {display: flex; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap; max-width: var(--containerWidth); width: 100%; padding: 2rem; border-radius: var(--borderRadius); }
 main svg {max-width: 150px; flex: 1 1 100%;}
@@ -47,20 +49,20 @@ main h1 {flex: 1 1 100%; margin-bottom: 2rem;}
 
 main section {flex: 1 1 100%; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 1rem;}
 main section:not(:last-of-type) {margin-bottom: 2rem;}
-main section h2 {color: var(--textColorAlt); width: 100%; flex: 1 1 100%; border-bottom: 1px solid var(--textColorAlt); padding-bottom: .5rem;}
+main section h2 {color: var(--colorTextPrimaryAlt); width: 100%; flex: 1 1 100%; border-bottom: 1px solid var(--colorLine); padding-bottom: .5rem;}
 
-main a:not(.logo):not(.title):not(.new-google-doc) {flex: 1 1 100%; max-width: calc(100%);border-radius: var(--borderRadius); background-color: var(--cardColor); padding: 1rem; margin: 0; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; text-align: center; position: relative;}
+main a:not(.logo):not(.title):not(.new-google-doc) {flex: 1 1 100%; max-width: calc(100%);border-radius: var(--borderRadius); background-color: var(--colorBackgroundSecondary); padding: 1rem; margin: 0; display: flex; align-items: center; justify-content: center; border: 2px solid transparent; text-align: center; position: relative; font-weight: 500;}
 main a:not(.logo):not(.title):not(.new-google-doc)::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all var(--easeInQuint); border-radius: var(--borderRadius);}
-main a:not(.logo):not(.title):not(.new-google-doc):hover, main a:not(.logo):not(.title):not(.new-google-doc):focus {border-color: var(--accentColor);}
+main a:not(.logo):not(.title):not(.new-google-doc):hover, main a:not(.logo):not(.title):not(.new-google-doc):focus {border-color: var(--colorBrandHazel);}
 main a:not(.logo):not(.title):not(.new-google-doc):hover::after, main a:not(.logo):not(.title):not(.new-google-doc):focus::after {opacity: 1;} 
 
 main a:not(.logo):not(.title):not(.new-google-doc) svg {max-width: 1rem; height: auto; margin-right: .5rem;}
-main a:not(.logo):not(.title):not(.new-google-doc) svg {fill: var(--textColor);}
+main a:not(.logo):not(.title):not(.new-google-doc) svg {fill: var(--colorTextPrimary);}
 
-main a.new-google-doc {width: 1rem; height: 1rem; border-radius: 256px; position: fixed; bottom: 2rem; right: 2rem; background-color: var(--cardColor); padding: 1rem; margin: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--backgroundColor); text-align: center; font-size: 1rem; z-index: 999;}
-main a.new-google-doc:hover, main a.new-google-doc:focus {border-color: var(--accentColor);}
+main a.new-google-doc {width: 1rem; height: 1rem; border-radius: 256px; position: fixed; bottom: 2rem; right: 2rem; background-color: var(--colorBackgroundSecondary); padding: 1rem; margin: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--colorBackground); text-align: center; font-size: 1rem; z-index: 999;}
+main a.new-google-doc:hover, main a.new-google-doc:focus {border-color: var(--colorBrandHazel);}
 main a:not(.logo):not(.title):not(.new-google-doc)::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all var(--easeInQuint); border-radius: var(--borderRadius);}
-main a.new-google-doc::before {position: absolute; right: 4rem; top: 50%; transform: translateY(150%) translateX(45px) rotate(-45deg); content: 'New Google Doc'; background-color: var(--textColor); color: var(--backgroundColor); border-radius: var(--borderRadius); opacity: 0; transition: .15s all var(--easeInQuint); font-size: 0.7rem; padding: .5rem 2rem; width: max-content; font-weight: 600; pointer-events: none; letter-spacing: .01rem;}
+main a.new-google-doc::before {position: absolute; right: 4rem; top: 50%; transform: translateY(150%) translateX(45px) rotate(-45deg); content: 'New Google Doc'; background-color: var(--colorTextPrimary); color: var(--colorBackground); border-radius: var(--borderRadius); opacity: 0; transition: .15s all var(--easeInQuint); font-size: 0.7rem; padding: .5rem 2rem; width: max-content; font-weight: 600; pointer-events: none; letter-spacing: .01rem;}
 main a.new-google-doc::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all var(--easeInQuint); border-radius: 256px;}
 main a.new-google-doc:hover::after, main a.new-google-doc:focus::after, main a.new-google-doc:hover::before, main a.new-google-doc:focus::before {opacity: 1;} 
 main a.new-google-doc:hover::before, main a.new-google-doc:focus::before {transform: translateY(-50%) translateX(0px) rotate(0deg);}
@@ -73,21 +75,23 @@ main a.new-google-doc.GH-logo::before {content: 'GOHUNT Brand Guidelines'; }
 
 /* logo colors */
 .logo-dark, .logo-primary, .logo-light {transition: .15s all var(--easeInQuint);}
-    .logo-dark{fill:var(--textColor);}
-	.logo-primary{fill:var(--accentColor);}
-	.logo-light{fill: var(--textColorAlt);}
+    .logo-dark{fill:var(--colorTextPrimary);}
+	.logo-primary{fill:var(--colorBrandHero);}
+	.logo-light{fill: var(--colorTextPrimaryAlt);}
 
-    a.logo:hover svg .logo-light, a.logo:focus svg .logo-light, a.logo:hover svg .logo-dark, a.logo:focus svg .logo-dark, a.logo:hover svg .logo-primary, a.logo:focus svg .logo-primary {fill: var(--accentColor);}
+    a.logo:hover svg .logo-light, a.logo:focus svg .logo-light, a.logo:hover svg .logo-dark, a.logo:focus svg .logo-dark, a.logo:hover svg .logo-primary, a.logo:focus svg .logo-primary {fill: var(--colorBrandHero);}
 
-    main a.new-google-doc.GH-logo:hover svg .logo-dark, main a.new-google-doc.GH-logo:hover svg .logo-primary, main a.new-google-doc.GH-logo:hover svg .logo-light  {fill: var(--accentColor);}
+    main a.new-google-doc.GH-logo:hover svg .logo-dark, main a.new-google-doc.GH-logo:hover svg .logo-primary, main a.new-google-doc.GH-logo:hover svg .logo-light  {fill: var(--colorBrandHero);}
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --backgroundColor: #101111;
-        --textColor: #eff2f4;
-        --accentColor: #F37735;
-        --cardColor: #292A2B;
-        --textColorAlt: #D0D5D8;
+        --colorBackground: #1C1C1D;
+        --colorTextPrimary: #FAFAFA;
+        --colorBrandHero: #F37735;
+        --colorBrandHazel: #A99766;
+        --colorBackgroundSecondary: #323132;
+        --colorTextPrimaryAlt: #404040;
+        --colorLine: #404040;
     }
 }
 
@@ -109,6 +113,7 @@ main a.new-google-doc.GH-logo::before {content: 'GOHUNT Brand Guidelines'; }
 
 
 </style>
+
 
 </head>
 
