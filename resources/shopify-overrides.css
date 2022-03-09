@@ -327,7 +327,7 @@ h1.section-header__title, h1.section-header__subtext {font-family: var(--fontBod
   @media (prefers-color-scheme: dark) {
   
     :root {
-		/* insert dark mode variabkles here, then make whatever adjustments you need */    
+		/* insert dark mode variables here, then make whatever adjustments you need */    
     }
   
   }
