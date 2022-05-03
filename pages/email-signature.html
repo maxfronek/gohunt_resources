@@ -15,9 +15,12 @@
     --colorBackground: #ffffff;
     --colorBackgroundSecondary: #f5f5f5;
     --colorText: #404040;
+    --colorSecondary: #8e8e92;
     --colorBrandHero: #f37735;
     --colorBrandHeroHover: #DB6B30;
+    --colorRuggedHazel: #A99776;
     --colorLine: #424C42;
+    --colorLineAlt: #E3E3E3;
     --colorBrandHazel: #A99766;
     --colorNegative: #FF3B30;
 
@@ -49,6 +52,9 @@
     h4 {font-size: 1rem;}
     body, p, ol, ul span {font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 1rem; line-height: 1.5;}
     .pre-container, .post-container {font-weight: 800; margin-bottom: 0px;font-size: 16px; letter-spacing: -0.3px; margin: 0 auto; max-width: calc(600px + 4rem); text-align: left; color: var(--colorText);}
+
+    .secondary {color: var(--colorSecondary);}
+
     :not(.container) p {max-width: 600px;}
     /* .pre-container:not(:first-of-type) {margin-top: 8rem;} */
     .pre-container {border-bottom: 2px solid var(--colorText); padding-bottom: 0.5rem;}
@@ -57,6 +63,14 @@
     .container p, .container span {line-height: 18px;}
     .container h2 {line-height: 27px;}
     .post-container {text-align: center; padding-left: 0; }
+    .post-container p {margin: 1rem auto; color: var(--colorSecondary); font-weight: 500; font-size: .8rem;}
+
+    /* Input your information */
+
+    .user-details .input-wrap {position: relative;}
+    .user-details input {border: 1px solid var(--colorLineAlt); background-color: transparent; border-radius: 4px; display: block; padding: .5rem 1rem; width: 100%; margin-bottom: 1rem;}
+    .user-details input:focus-visible {outline-color: var(--colorRuggedHazel);} 
+    .user-details label {display: block; position: absolute; font-size: .6rem; left: .75rem; top: -9px; background-color: var(--colorBackground); padding: 0 .25rem; color: var(--colorSecondary);}
 
     .directions {font-family: var(--fontMain); max-width: calc(600px + 4rem); margin: 4rem auto 0;}
     .directions h2 {margin: 0;}
@@ -94,11 +108,13 @@
 
     .toast a {color: var(--colorBackground);}
 
-    a.button, input[type="button"], button {border: 4px solid var(--colorText); border-radius: 256px; padding:1rem 2rem; display: inline-block; transition: .15s all ease-in-out; margin: 0 auto; font-size: 1rem; font-weight: 600; text-decoration: none; color: var(--colorText); background-color: transparent;}
+    a.button, input[type="button"], button {border: 3px solid var(--colorText); border-radius: 256px; padding:.5rem 1rem; display: inline-block; transition: .15s all ease-in-out; margin: 0 auto; font-size: 1rem; font-weight: 600; text-decoration: none; color: var(--colorText); background-color: transparent;}
     a.button:hover, input[type="button"]:hover, button:hover {background-color: var(--colorText); color: var(--colorBackground); cursor: pointer;}
 
     button.gmailLink, .button.gmailLink {background-color: var(--colorBrandHero); color: var(--colorBackground); border: 4px solid transparent;}
     button.gmailLink:hover, .button.gmailLink:hover {background-color: var(--colorBrandHeroHover);}
+
+
 
    /* .post-container button {margin-right: 0;} */
     .post-container button.gmailLink, .post-container .button.gmailLink {margin-left: 1rem;}
@@ -122,7 +138,8 @@
         --colorText: #fafafa;
         --colorBrandHero: #f37735;
         --colorBrandHeroHover: #DB6B30;
-        --colorLine: #424C42;
+        --colorLine: #404040;
+        --colorLineAlt: #424c42;
         --colorBrandHazel: #A99766;
         --colorNegative: #FF3B30;
 
@@ -147,14 +164,36 @@
 <a href="https://maxfronek.github.io/gohunt_resources/" class="back-to-main">&larr;</a>
 
 <div class="pre-container">
+<h2>Enter Your Information</h2>
+</div>
+<div class="container user-details">
+    <div class="input-wrap">
+        <label for="name">Your Name</label>
+        <input type="text" placeholder="Your Name" name="name" />
+    </div>
+    <div class="input-wrap">
+        <label for="title">Your Title</label>
+        <input type="text" placeholder="Your Title" name="title" />
+    </div>
+    <div class="input-wrap">
+        <label for="email">Your Email Address</label>
+        <input type="email" placeholder="name@GOHUNT.com" name="email" />
+    </div>
+    <div class="input-wrap">
+        <label for="phone">Your Phone Number</label>
+        <input type="tel" placeholder="555.123.4567" name="phone" />
+    </div>
+</div> <!-- end user inputs -->
+
+<div class="pre-container">
   <h2>Email signature</h2>
 </div>    
 <div class="container email-signature-container" id="signature">
 <!-- GOHUNT Email Signature -->
 <hr style="width: 200px; border: 0px solid transparent; height: 2px; background-color: #202020; margin-left: 0;"/>
-<h2 style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; margin-bottom: 0px;font-size: 16px; letter-spacing: -0.3px; color: #404040;'>Your Name</h2>
-<p style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 500; margin-top: 4px; letter-spacing: .1px; font-size: 12px; color:#404040;'>Your Title</p>
-<p style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 500; margin-top: 4px; letter-spacing: .1px; font-size: 12px; color: #404040'><span style="color: #404040≈ !important; text-decoration: none !important;">555.123.4567</span> | <span style="color: #404040; text-decoration: none !important;">name@GOHUNT.com</span> | <a href="https://gohunt.com" target="_blank" style="color: #404040 !important; font-weight: 800; text-decoration: none !important;">GOHUNT.com</a></p>
+<h2 style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; margin-bottom: 0px;font-size: 16px; letter-spacing: -0.3px; color: #404040;'><span id="name">Your Name</span></h2>
+<p style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 500; margin-top: 4px; letter-spacing: .1px; font-size: 12px; color:#404040;'><span id="title">Your Title</span></p>
+<p style='font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 500; margin-top: 4px; letter-spacing: .1px; font-size: 12px; color: #404040'><a href="tel:5551234567" id="phone-link" target="_blank" style="color: #404040; text-decoration: none !important;"><span style="color: #404040≈ !important; text-decoration: none !important;" id="phone">555.123.4567</span></a> | <a href="mailto:reachus@gohunt.com" id="email-link" target="_blank" style="color: #404040; text-decoration: none !important;" ><span style="color: #404040; text-decoration: none !important;" id="email">name@GOHUNT.com</span></a> | <a href="https://gohunt.com" target="_blank" style="color: #404040 !important; font-weight: 800; text-decoration: none !important;">GOHUNT.com</a></p>
 <a href="https://gohunt.com" target="_blank">
 <img src="https://lh3.googleusercontent.com/fife/AAWUweWyGAmS239kSrHfcazP0hwwC5lzJ_YmTzoAi5q-FOKuFH2iG1FxKsRbpgwla7NJJNzgTZJdWpG_57Y8hfbfhT6ufvpUcYH4-YbfC1vGDP6obyD_QL-zBx6FgGxfD_Orz3YCOiNyGsi9TtwJml1GMnJEOQEo-X7NN3l9CMWRKF9VAHSP32-AbQWaBvFD59llNDFYBoBM8FyBrHWF5lRPpFZcxSanqvBC14GkN9evTHvN_swrw_9uBfuiCUZsCa-2zE_pFp6_qzI43gFeqGqtT_VD08xARxZfVNAxY01Fi2t-iGJl2ez-y-6-3qiPumBv0F0NJXSuiaLC8VKjVCv3l-KhNqVrMn_L90kJRWQBwE4P0S25ZOFPmYf1ruD53_u_dSogHeEJw8VopGuDe3TCjfZEVZyxanrrPapwV3lS_2O4DeX4vS4bpQ1VJ--bAguqtKguLM2OtiYBgCT3HScHkUksl9pLEaeBBN4K7LK-LlXFQJUHKrIx4tiJm-RtqIoQJ26tU6Z1PtJSzBVqVe8o5OTZ5TQYPtqAZ-tpOOM8NCzHscaJufbWe0Kr0R-WfV58ccrnbdPa9-Gr_jyvdCSIUGmQT-TAoM1dBDVbdd3AqXFIUAe6jPpIrN2UmKoJvZu_yjWtc81DdqankYngROkdTvN5UvoaGddyCWw_wyfDqBniW6cHggXmh_wvgFwX28Ht7vIvqLORpB9aVSGN6w_M8S51zQxPM2sAaA=w1297-h918-ft" style="max-width: 32px; height: auto; width: 32px; margin-left: -4px;" width="32"/></a>
 
@@ -164,8 +203,9 @@
 </div>
 
 <div class="post-container">
-    <button onclick="copyText();">Copy</button>
+    <button onclick="copyText();">Copy Signature</button>
  <!-- <a class="button gmailLink" href="https://mail.google.com/mail/u/0/#settings/general">Gmail Settings</a> -->
+ <p>Make sure to use this copy button to copy your signature, or it may not transfer correctly into Gmail.</p>
 </div>    
 
 <div class="toast" id="copySuccess">
@@ -180,11 +220,10 @@
     <div class="accordion__content">
         <p class="disclaimer">(Note: these instructions are for a computer, not a phone or tablet)</p>
         <ol>
-            <li>Click the copy button, then click the link for your <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail settings</a></li>
+            <li>Enter your information in the fields at the top of the page</li>
+            <li>Click the copy button, then click the link for your <a href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Gmail settings</a> <span class="secondary">(make sure you're logged into your GOHUNT email account)</span></li>
             <li>Scroll down to the <strong>Signature</strong> section, click "Create New", and name the signature whatever you want</li>
             <li>Paste the signature into the text field on the right</li>
-            <li>Change your name, title, phone number, and email</li>
-            <li>The GOHUNT address is optional, delete it if you do not want it in your&nbsp;signature</li>
             <li>Select your new signature as the default for new messages, and check the box next to "Insert signature before quoted text in replies and remove the "--" line that precedes it."</li>
             <li>Scroll to the bottom of the settings page and click "Save Changes"</li>
             <li>Your signature will now be added to new emails you compose</li>
@@ -288,7 +327,43 @@ accordions.forEach((accordion) => {
 	};
 }); // end accordion function
 
+// user details
+// name
+var inputName  = document.querySelector("[type=text][name=name]"),
+    outputName = document.getElementById("name");
+function keydownHandlerName() {
+  outputName.innerHTML = this.value;
+}
+inputName.addEventListener("input", keydownHandlerName);
+// title
+var inputTitle  = document.querySelector("[type=text][name=title]"),
+    outputTitle = document.getElementById("title");
+function keydownHandlerTitle() {
+  outputTitle.innerHTML = this.value;
+}
+inputTitle.addEventListener("input", keydownHandlerTitle);
+// phone
+var inputPhone  = document.querySelector("[type=tel][name=phone]"),
+    outputPhone = document.getElementById("phone"),
+    hrefPhone = document.getElementById("phone-link");
+function keydownHandlerPhone() {
+  var initialInput = this.value;
+  let strippedNumber = initialInput.replace(/\D/g,'');
+  outputPhone.innerHTML = this.value;
+  hrefPhone.setAttribute("href", "tel:" + strippedNumber);
+}
+inputPhone.addEventListener("input", keydownHandlerPhone);
+//email
+// title
+var inputEmail  = document.querySelector("[type=email][name=email]"),
+    outputEmail = document.getElementById("email"),
+    hrefEmail = document.getElementById("email-link");
 
+function keydownHandlerEmail() {
+  outputEmail.innerHTML = this.value;
+  hrefEmail.setAttribute("href", "mailto:" + this.value);
+}
+inputEmail.addEventListener("input", keydownHandlerEmail);
 </script>
 
 </body>
