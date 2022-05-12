@@ -1,0 +1,215 @@
+'<?xml version="1.0" encoding="UTF-8"?>\n' +
+  '<?xml-stylesheet type="text/xsl" href="https://media.rss.com/style.xsl"?>\n' +
+  '<rss xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xml:lang="en" version="2.0">\n' +
+  '  <channel>\n' +
+  '    <title><![CDATA[Big Hunt Guys]]></title>\n' +
+  '    <link>http://www.gohunt.com</link>\n' +
+  '    <atom:link href="https://media.rss.com/gohunt/feed.xml" rel="self" type="application/rss+xml"/>\n' +
+  '    <atom:link rel="hub" href="https://hub.livewire.io/"/>\n' +
+  "    <description><![CDATA[Welcome to the GOHUNT podcast. It's about damn time! Kick back with your favorite beverage of choice and hear some tips, tactics and strategies and a bit of randomness from Chris Neville, Brady Miller and Trail Kreitzer as they shoot the shit about all things hunting.]]></description>\n" +
+  '    <generator>RSS.com v1.5.6</generator>\n' +
+  '    <lastBuildDate>Thu, 12 May 2022 16:59:44 GMT</lastBuildDate>\n' +
+  '    <language>en</language>\n' +
+  '    <copyright><![CDATA[GOHUNT 2022]]></copyright>\n' +
+  '    <itunes:image href="https://media.rss.com/gohunt/20220317_120357_b371b35bbcdf934aa347e8baea8088dd.jpg"/>\n' +
+  '    <image>\n' +
+  '      <url>https://media.rss.com/gohunt/20220317_120357_b371b35bbcdf934aa347e8baea8088dd.jpg</url>\n' +
+  '      <title>Big Hunt Guys</title>\n' +
+  '      <link>http://www.gohunt.com</link>\n' +
+  '    </image>\n' +
+  "    <itunes:summary><![CDATA[Welcome to the GOHUNT podcast. It's about damn time! Kick back with your favorite beverage of choice and hear some tips, tactics and strategies and a bit of randomness from Chris Neville, Brady Miller and Trail Kreitzer as they shoot the shit about all things hunting.]]></itunes:summary>\n" +
+  '    <podcast:locked owner="tech@gohunt.com">Yes</podcast:locked>\n' +
+  '    <itunes:author>GOHUNT</itunes:author>\n' +
+  '    <itunes:owner>\n' +
+  '      <itunes:name>GOHUNT</itunes:name>\n' +
+  '      <itunes:email>tech@gohunt.com</itunes:email>\n' +
+  '    </itunes:owner>\n' +
+  '    <itunes:explicit>yes</itunes:explicit>\n' +
+  '    <itunes:type>episodic</itunes:type>\n' +
+  '    <itunes:category text="Leisure">\n' +
+  '      <itunes:category text="Hobbies"/>\n' +
+  '    </itunes:category>\n' +
+  '    <itunes:category text="Science">\n' +
+  '      <itunes:category text="Nature"/>\n' +
+  '    </itunes:category>\n' +
+  '    <itunes:category text="Society &amp; Culture">\n' +
+  '      <itunes:category text="Places &amp;amp; Travel"/>\n' +
+  '    </itunes:category>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Everything taxidermy]]></title>\n' +
+  '      <itunes:title><![CDATA[Everything taxidermy]]></itunes:title>\n' +
+  '      <itunes:summary>The guys take a field trip to southern Utah to visit Strip Taxidermy where they spend some time asking questions and swapping stories with taxidermist, Jeff Baird. Jeff has been doing taxidermy for over a decade and specializes in mule deer. Jeff is also the owner of Bairds Beard Oil and has what is arguably the best beard in the industry! This podcast is packed with taxidermy tips and tricks, some laughs, and good old-fashioned storytelling!</itunes:summary>\n' +
+  '      <description><![CDATA[<p>The guys take a field trip to southern Utah to visit Strip Taxidermy where they spend some time asking questions and swapping stories with taxidermist, Jeff Baird. Jeff has been doing taxidermy for over a decade and specializes in mule deer. Jeff is also the owner of Bairds Beard Oil and has what is arguably the best beard in the industry! This podcast is packed with taxidermy tips and tricks, some laughs, and good old-fashioned storytelling!</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/484848</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220512_040551_a86b0a37835fa49fba6b0acb012379cd.mp3" length="175588808" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">b40ad0ef-9284-42c1-b152-c7080168975b</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220512_040544_814980a6a6dafa7670352241d85aeb6c.jpg"/>\n' +
+  '      <itunes:duration>4390</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>11</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 12 May 2022 16:59:44 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[North to Alaska]]></title>\n' +
+  '      <itunes:title><![CDATA[North to Alaska]]></itunes:title>\n' +
+  '      <itunes:summary>Trail Kreitzer and Chris Neville sit down with Brady Miller to talk about their Alaska Caribou hunt featured in our newest GOHUNT Original, "Nothing But Daylight." They answer all questions related to hunting in Alaska.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>Trail Kreitzer and Chris Neville sit down with Brady Miller to talk about their Alaska Caribou hunt featured in our newest GOHUNT Original, "Nothing But Daylight." They answer all questions related to hunting in Alaska.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/477531</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220505_100534_3cafc68d575eae0440cfc2320977d035.mp3" length="218154455" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">b9db876b-1b6b-418f-a3a9-781ddb86994b</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220505_100529_2e70d67bf3b7092183e0093e74978709.jpg"/>\n' +
+  '      <itunes:duration>5454</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>10</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 05 May 2022 23:20:15 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[BONUS: Hunting fitness with MTN OPS]]></title>\n' +
+  '      <itunes:title><![CDATA[BONUS: Hunting fitness with MTN OPS]]></itunes:title>\n' +
+  '      <itunes:summary>In this episode, Rihana Carry and Matt Davis from MTN OPS sit down with Chris Neville and Brady Miller to discuss a variety of topics surrounding physical fitness, hunting and MTN OPS products.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>In this episode, Rihana Carry and Matt Davis from MTN OPS sit down with Chris Neville and Brady Miller to discuss a variety of topics surrounding physical fitness, hunting and MTN OPS products.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/475244</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220503_110555_916059487cc50879fa252aae6b40a34d.mp3" length="144165201" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">07b543f7-43fd-4a38-ba5b-c2ca3313ac52</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220503_110550_6ee8f78481b504d1d4db759026961f34.jpg"/>\n' +
+  '      <itunes:duration>3604</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>9</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Tue, 03 May 2022 23:42:50 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[New maps only membership at GOHUNT]]></title>\n' +
+  '      <itunes:title><![CDATA[New maps only membership at GOHUNT]]></itunes:title>\n' +
+  "      <itunes:summary>Trail Kreitzer, Chris Neville and GOHUNT's Product Manager, Mike Dietrich, sit down to discuss the development and launch of Explorer; our maps only membership. Explorer offers full access to our mapping product (web and mobile), which covers public/private land, hunting specific layers, offline maps, as well as Real 3D and Terrain Analysis. In addition, Explorer members also gain access to our Point Tracker tool and the GOHUNT Gear Shop rewards program.</itunes:summary>\n" +
+  "      <description><![CDATA[<p>Trail Kreitzer, Chris Neville and GOHUNT's Product Manager, Mike Dietrich, sit down to discuss the development and launch of Explorer; our maps only membership. Explorer offers full access to our mapping product (web and mobile), which covers public/private land, hunting specific layers, offline maps, as well as Real 3D and Terrain Analysis. In addition, Explorer members also gain access to our Point Tracker tool and the GOHUNT Gear Shop rewards program.</p>]]></description>\n" +
+  '      <link>https://rss.com/podcasts/gohunt/469264</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220427_100428_cd8583fc2db62b101a2c8f382c96a88b.mp3" length="151487282" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">acbebfbc-4abe-4ce2-bff7-05750704c4ed</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220427_100416_ad885147ad70cf3c9e56cc3b1a89829c.jpg"/>\n' +
+  '      <itunes:duration>3787</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>8</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 28 Apr 2022 10:00:18 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Barriers of entry for a first-time Western hunt]]></title>\n' +
+  '      <itunes:title><![CDATA[Barriers of entry for a first-time Western hunt]]></itunes:title>\n' +
+  '      <itunes:summary>The guys chat with Chad Ryker of Backcountry Rookies and they discuss how to get into Western hunting for the first time. What are the barriers of entry? How do you get tags? What gear do you need? And much more.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>The guys chat with Chad Ryker of Backcountry Rookies and they discuss how to get into Western hunting for the first time. What are the barriers of entry? How do you get tags? What gear do you need? And much more.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/462102</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220420_100420_d6096577fad1dba3af5651bfd6e7fa95.mp3" length="114799103" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">87dfb2ec-e72e-480a-8ff1-dc38f12575e4</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220420_100407_f6e951d6e55fa3bef890f40df20579db.jpg"/>\n' +
+  '      <itunes:duration>2870</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>7</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 21 Apr 2022 10:00:18 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[The Open Sight Muzzleloader Challenge]]></title>\n' +
+  '      <itunes:title><![CDATA[The Open Sight Muzzleloader Challenge]]></itunes:title>\n' +
+  '      <itunes:summary>Muzzleloaders open the door to hunting more across the West. In this episode, Brady sits down with Ryan and Josh as they discuss their vastly different open sight muzzleloader setups. They also dive into a little friendly muzzy competition they had that is now live on the GOHUNT YouTube channel.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>Muzzleloaders open the door to hunting more across the West. In this episode, Brady sits down with Ryan and Josh as they discuss their vastly different open sight muzzleloader setups. They also dive into a little friendly muzzy competition they had that is now live on the GOHUNT YouTube channel.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/455705</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220414_090452_3879eb3ca2817a8563815efd9c054ca0.mp3" length="74655312" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">8399344e-4d07-4fbc-a970-1b6c40cf7418</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220414_090407_ebcf4f12b2c5a36127f0d7ac1df8de75.jpg"/>\n' +
+  '      <itunes:duration>2333</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>6</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 14 Apr 2022 21:52:06 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Do you need to be in shape to hunt?]]></title>\n' +
+  '      <itunes:title><![CDATA[Do you need to be in shape to hunt?]]></itunes:title>\n' +
+  '      <itunes:summary>Do you need to be "in shape" to mountain hunt? The Big Hunt Guys dive into their thoughts on working out for hunting and what they do to ensure they are ready for anything the mountain throws at them.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>Do you need to be "in shape" to mountain hunt? The Big Hunt Guys dive into their thoughts on working out for hunting and what they do to ensure they are ready for anything the mountain throws at them.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/445158</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220405_080421_002c2c76dc8c196e421f837c75f95dbf.mp3" length="102944069" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">9a34596b-bd6e-4eae-84d8-a5fbe9e2df4f</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220405_080453_ab2d09d460c1f45b5082bc08345f783a.jpg"/>\n' +
+  '      <itunes:duration>3217</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>5</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 07 Apr 2022 10:00:17 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Hunting pressure and blowing up spots]]></title>\n' +
+  '      <itunes:title><![CDATA[Hunting pressure and blowing up spots]]></itunes:title>\n' +
+  '      <itunes:summary>On this episode, the guys talk about hunting pressure, blowing up spots and why a multi-state strategy is your best bet for hunting more often.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>On this episode, the guys talk about hunting pressure, blowing up spots and why a multi-state strategy is your best bet for hunting more often.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/439515</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220331_080330_4ba2623ffb208a681e4944a00ac2e6d3.mp3" length="38295125" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">1c2aef9b-71d3-43d4-9756-b3e785d2d7f0</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220331_080313_c68b09d72e71f4aef1a1ca55d6c04cf3.jpg"/>\n' +
+  '      <itunes:duration>2393</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>4</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 31 Mar 2022 20:55:13 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Bonus Episode: Big Regulation Changes from Montana]]></title>\n' +
+  '      <itunes:title><![CDATA[Bonus Episode: Big Regulation Changes from Montana]]></itunes:title>\n' +
+  "      <itunes:summary>Brady Miller and Dave Barnett, Research Content Manager at GOHUNT, sit down to talk about all of the big impacts and changes for Montana in 2022. The guys also discuss some exciting new enhancements just released to Filtering 2.0 for Insider members.Don't forget the deadline to apply in Montana is 11:45 p.m. MDT on April 1, 2022!</itunes:summary>\n" +
+  "      <description><![CDATA[<p>Brady Miller and Dave Barnett, Research Content Manager at GOHUNT, sit down to talk about all of the big impacts and changes for Montana in 2022. The guys also discuss some exciting new enhancements just released to Filtering 2.0 for Insider members.</p><p>Don't forget the deadline to apply in Montana is 11:45 p.m. MDT on April 1, 2022!</p>]]></description>\n" +
+  '      <link>https://rss.com/podcasts/gohunt/435468</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220328_050337_4cbb39efb52c3060e48927fb03514abc.mp3" length="64183289" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">b43d827b-d528-4a29-8217-3091208d9669</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220328_050352_4cd04796cdad894fadbf87cbacfa54fe.jpg"/>\n' +
+  '      <itunes:duration>2006</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>3</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Mon, 28 Mar 2022 17:59:51 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Utah Big Game ]]></title>\n' +
+  '      <itunes:title><![CDATA[Utah Big Game ]]></itunes:title>\n' +
+  '      <itunes:summary>Trail and Brady sit down with Covy Jones (Utah Big Game Coordinator) and Kent Hershey (Utah Big Game Projects Coordinator) and chat about the status of mule deer in Utah.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>Trail and Brady sit down with Covy Jones (Utah Big Game Coordinator) and Kent Hershey (Utah Big Game Projects Coordinator) and chat about the status of mule deer in Utah.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/431055</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220324_060326_d494ab6249e66481d6f858c2e1a90da3.mp3" length="81620476" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">82863796-9230-4ab1-beeb-c3fe7f85ffd3</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220324_060335_780d5d23aa1bd0401dd826f30f3635a6.jpg"/>\n' +
+  '      <itunes:duration>2551</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>2</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Thu, 24 Mar 2022 06:22:35 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '    <item>\n' +
+  '      <title><![CDATA[Big Hunt Guys Intro!]]></title>\n' +
+  '      <itunes:title><![CDATA[Big Hunt Guys Intro!]]></itunes:title>\n' +
+  '      <itunes:summary>Welcome to the Big Hunt Guys Podcast! Brady Miller, Chris Neville and Trail Kreitzer give a little background story on themselves, their hunting backgrounds, what they do at GOHUNT and they also provide a little insight on what this podcast will be about moving forward.</itunes:summary>\n' +
+  '      <description><![CDATA[<p>Welcome to the Big Hunt Guys Podcast! Brady Miller, Chris Neville and Trail Kreitzer give a little background story on themselves, their hunting backgrounds, what they do at GOHUNT and they also provide a little insight on what this podcast will be about moving forward.</p>]]></description>\n' +
+  '      <link>https://rss.com/podcasts/gohunt/396370</link>\n' +
+  '      <enclosure url="https://media.rss.com/gohunt/20220218_090237_6ea8848f82af966e930b110535e9d3d2.mp3" length="63126892" type="audio/mpeg"/>\n' +
+  '      <guid isPermaLink="false">1c942344-a13e-4658-a7a5-731e896ccfee</guid>\n' +
+  '      <itunes:image href="https://media.rss.com/gohunt/20220317_120305_884d436f1e882f224ef4597c43350493.jpg"/>\n' +
+  '      <itunes:duration>1973</itunes:duration>\n' +
+  '      <itunes:episodeType>full</itunes:episodeType>\n' +
+  '      <itunes:episode>1</itunes:episode>\n' +
+  '      <itunes:season>1</itunes:season>\n' +
+  '      <itunes:explicit>yes</itunes:explicit>\n' +
+  '      <pubDate>Fri, 18 Feb 2022 21:17:52 GMT</pubDate>\n' +
+  '    </item>\n' +
+  '  </channel>\n' +
+  '</rss>'
