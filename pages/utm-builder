@@ -1,0 +1,542 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>UTM Parameter Builder</title>
+        <meta name="description" content="Get Started">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./images/gh-icon.png">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;800&display=swap');
+
+
+:root {
+    --colorBackground: #ffffff;
+    --colorBackgroundSecondary: #f5f5f5;
+    --colorBackgroundHover: #e3e3e3;
+    --colorText: #404040;
+    --colorTextHover: #5d5d5c;
+    --colorSecondary: #8e8e92;
+    --colorBrandHero: #f37735;
+    --colorBrandHeroHover: #DB6B30;
+    --colorRuggedHazel: #A99776;
+    --colorBrandGunmetal: #202621;
+    --colorLine: #424C42;
+    --colorLineAlt: #E3E3E3;
+    --colorBrandHazel: #A99766;
+    --colorNegative: #FF3B30;
+
+    --fontMain: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .5;
+    color: var(--colorText);
+  }
+  
+  70% {
+    opacity: 1;
+    color: var(--colorBrandHazel);
+  }
+  
+  100% {
+    opacity: .5;
+    color: var(--colorText);
+  }
+}
+
+
+    html {font-size: 16px;}
+    body {padding: 4rem 2rem 6rem; background-color: var(--colorBackgroundSecondary); color: var(--colorText);}
+    h2 {font-size: 1.6rem;}
+    h3 {font-size: 1.25em;}
+    h4 {font-size: 1rem;}
+    body, p, ol, ul span {font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 1rem; line-height: 1.5;}
+    .pre-container, .post-container {font-weight: 800; margin-bottom: 0px;font-size: 16px; letter-spacing: -0.3px; margin: 0 auto; max-width: calc(600px + 4rem); text-align: left; color: var(--colorText);}
+
+    .secondary {color: var(--colorSecondary);}
+
+    ::selection {
+  background: var(--colorBrandGunmetal); color: var(--colorBackground); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: var(--colorBrandGunmetal);color: var(--colorBackground); /* Gecko Browsers */
+}
+
+    :not(.container) p {max-width: 600px;}
+    /* .pre-container:not(:first-of-type) {margin-top: 8rem;} */
+    .pre-container {border-bottom: 2px solid var(--colorText); padding-bottom: 0.5rem;}
+    .pre-container h2 {margin-bottom: 0;}
+    .pre-container em, .container em {font-weight: 500; font-size: .8rem; padding-bottom: 2rem; display: inline-block; opacity: .5;}
+    .container {max-width: 600px; margin: 2rem auto; background-color: #FFFFFF; padding: 2rem; box-shadow: 4px 4px 16px rgba(30,30,30,0.16); border-radius: .25rem;}
+    .container p, .container span {line-height: 18px;}
+    .container h2 {line-height: 27px;}
+    .post-container {text-align: center; padding-left: 0; }
+    .post-container p {margin: 1rem auto; color: var(--colorSecondary); font-weight: 500; font-size: .8rem;}
+
+    /* Input your information */
+
+    .user-details .input-wrap {position: relative;}
+    .user-details input, .user-details select {border: 1px solid var(--colorLineAlt); background-color: transparent; border-radius: 4px; display: block; padding: 1rem; width: 100%; margin-bottom: 1rem;}
+    .user-details input:focus-visible, .user-details select:focus-visible {outline-color: var(--colorRuggedHazel);} 
+    .user-details label {display: block; position: absolute; font-size: .6rem; left: .75rem; top: -7px; background-color: var(--colorBackground); padding: 0 .25rem; color: var(--colorSecondary);}
+
+    .directions {font-family: var(--fontMain); max-width: calc(600px + 4rem); margin: 4rem auto 0;}
+    .directions h2 {margin: 0;}
+    .directions ol {margin-bottom: 2rem;}
+    .directions li::marker {font-weight: 800;}
+    .directions p {max-width: 550px}
+    .directions p:first-of-type {font-size: .8rem; opacity: .8; margin-top: .5rem;}
+    .directions a {color: var(--colorText); transition: .15s all ease-in-out;}
+    .directions a:hover {opacity: .5;}
+
+    .accordion {overflow: hidden;}
+    .accordion__intro {position: relative; border-bottom: 2px solid var(--colorText); padding-bottom: .5rem; opacity: .5; transition: .3s all ease-in-out;}
+    .accordion__active .accordion__intro {opacity: 1;}
+    .accordion__intro:hover, .accordion__intro h2:hover {cursor: pointer;}
+    .accordion__content {max-height: 0; overflow: hidden; will-change: max-height; transition: .5s all ease-in-out; opacity: 0;}
+    .accordion__active .accordion__content {opacity: 1;}
+
+    .accordion__intro::after {content: "+"; position: absolute; right: 0rem; top: 50%; transform: translateY(-50%) rotate(0deg); font-size: 1.2rem; font-weight: 800; transition: .3s all ease-in-out; animation: 3s pulse infinite ease-in-out;}
+    .accordion__active .accordion__intro::after {transform: translateY(-50%) rotate(-45deg);}
+
+    li {margin-bottom: .5rem;}
+
+    .night-toggle {position: absolute; top: 2rem; right: 2rem; transition: .15s all ease-in-out; border-radius: 256px; border: 2px solid var(--colorText); font-weight: 800;}
+    .night-toggle:hover {cursor: pointer; background: var(--colorText); color: var(--colorBackground);}
+    .night-toggle::before {position: absolute; right: 2rem; top: 50%; transform: translateY(150%) translateX(45px) rotate(-45deg); background-color: var(--colorText); color: var(--coolorBackground); border-radius: .25rem; opacity: 0; transition: .15s all ease-in-out; font-size: 0.7rem; padding: .5rem 2rem; width: max-content; font-weight: 600; pointer-events: none; letter-spacing: .01rem;}
+    .night-toggle::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all var(--easeInQuint); border-radius: var(--borderRadius);}
+
+    .night-toggle:hover::before, .night-toggle:focus::before {opacity: 1;} 
+    .night-toggle:hover::before, .night-toggle:focus::before {transform: translateY(-50%) translateX(0px) rotate(0deg);}
+
+    .toast {position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(10px); padding: 1rem; background-color: var(--colorText); color: var(--colorBackground); font-family: var(--fontMain); border-radius: 4px; opacity: 0; transition: .3s all ease-in-out; box-shadow: 2px 2px 16px 0 rgba(40,40,40,.2); pointer-events: none; width: max-content;}
+    .toast.show {opacity: 1; transform: translateX(-50%) translateY(0); transition: .3s all ease-in-out; pointer-events: all; z-index: 999;}
+    .closeToast {font-weight: 800; margin-left: .5rem; display: inline-block; text-decoration: none;transition: .15s all ease-in-out;}
+    .closeToast:hover {color: var(--colorNegative);}
+
+    .toast a {color: var(--colorBackground);}
+
+    a.button, input[type="button"], button {border: 3px solid var(--colorText); border-radius: 256px; padding:.5rem 1rem; display: inline-block; transition: .15s all ease-in-out; margin: 0 auto; font-size: 1rem; font-weight: 600; text-decoration: none; color: var(--colorText); background-color: transparent;}
+
+    a.button.action, input[type="button"].action, button.action {background-color: var(--colorText); color: var(--colorBackground); margin-left: 1rem;}
+
+    a.button:hover, input[type="button"]:hover, button:hover {background-color: var(--colorBackgroundHover); color: var(--colorText); cursor: pointer;}
+
+    a.button.action:hover, input[type="button"].action:hover, button.action:hover {background-color: var(--colorTextHover); border-color: var(--colorTextHover); color: var(--colorBackground);}
+
+    button.gmailLink, .button.gmailLink {background-color: var(--colorBrandHero); color: var(--colorBackground); border: 4px solid transparent;}
+    button.gmailLink:hover, .button.gmailLink:hover {background-color: var(--colorBrandHeroHover);}
+
+    .optionalField {transition: .3s all ease-in-out;}
+    .hide {max-height: 0px; opacity: 0;}
+    .show {max-height: 500px; opacity: 1;}
+
+
+   /* .post-container button {margin-right: 0;} */
+    .post-container button.gmailLink, .post-container .button.gmailLink {margin-left: 1rem;}
+
+
+
+   a.back-to-main {width: 1rem; height: 1rem; border-radius: 256px; position: fixed; top: 2rem; left: 2rem; background-color: var(--colorBackground); padding: 1rem; margin: 0; display: flex; align-items: center; justify-content: center; border: 2px solid var(--colorBackgroundSecondary); text-align: center; font-size: 1rem; z-index: 999; transition: .15s all ease-in-out; font-weight: 800; text-decoration: none;}
+   a.back-to-main:hover, a.back-to-main:focus {border-color: var(--colorBrandHazel);}
+   a.back-to-main::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all ease-in-out; border-radius: 256px;}
+   a.back-to-main::before {position: absolute; right: -15rem; top: 50%; transform: translateY(150%) translateX(45px) rotate(45deg); content: 'Back to GOHUNT Resources'; background-color: var(--colorText); color: var(--colorBackground); border-radius: 4px; opacity: 0; transition: .15s all ease-in-out; font-size: 0.7rem; padding: .5rem 2rem; width: max-content; font-weight: 600; pointer-events: none; letter-spacing: .01rem; display: block;}
+    a.back-to-main::after {position: absolute; box-shadow: 2px 2px 5px 0 rgba(50,50,50, .3); opacity: 0; width: 100%; height: 100%; top: 0; left: 0; z-index: -1; content: '';transition: .15s all var(--easeInQuint); border-radius: 256px;}
+    .back-to-main:hover::after, a.back-to-main:focus::after, a.back-to-main:hover::before, a.back-to-main:focus::before {opacity: 1;} 
+    a.back-to-main:hover::before, a.back-to-main:focus::before {transform: translateY(-50%) translateX(0px) rotate(0deg);}
+    a.back-to-main:visited {color: var(--colorText);}
+
+
+@media (prefers-color-scheme: dark) {
+        :root {
+        --colorBackground: #1c1c1d;
+        --colorBackgroundSecondary: #323132;
+        --colorText: #fafafa;
+        --colorBrandHero: #f37735;
+        --colorBrandHeroHover: #DB6B30;
+        --colorLine: #404040;
+        --colorLineAlt: #424c42;
+        --colorBrandHazel: #A99766;
+        --colorNegative: #FF3B30;
+
+        --fontMain: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+}
+
+@media screen and (min-width: 1400px) {
+    html {font-size: 18px;}
+    body, p, ol, ul span {line-height: 2;}
+    .directions p {max-width: 600px;}
+}
+
+</style>
+
+
+
+<body class="email-signature">
+
+<main>
+
+<a href="https://maxfronek.github.io/gohunt_resources/" class="back-to-main">&larr;</a>
+
+
+<div class="pre-container">
+    <h2>UTM Parameter Builder</h2>
+  </div>    
+  <div class="container email-signature-container" id="signature">
+  <!-- GOHUNT Email Signature -->
+  <span id="param__URL">https://GOHUNT.com</span><span id="allParameters">?ref=<span id="param__source">source</span><span id="param__affiliateName"></span>_<span id="param__bizUnit">businessUnit</span><span id="param__campaign"></span></span></div>
+  
+  <div class="post-container">
+      <button onclick="copyText();">Copy Full URL</button>
+      <button onclick="copyParameterText();" class="action">Copy Parameters Only</button>
+  </div>    
+  
+  <div class="toast" id="copySuccess">
+      Full URL Copied!&nbsp;<a class="closeToast" onclick="closeToast();">&times;</a>
+  </div>
+
+    
+  <div class="toast" id="copyParameterSuccess">
+    Parameters Copied!&nbsp;<a class="closeToast" onclick="closeParameterToast();">&times;</a>
+</div>
+  
+
+<div class="pre-container">
+<h2>Build Your URL</h2>
+</div>
+<div class="container user-details">
+    <em>Note: Do not use spaces in any of the text input fields below. Use hyphens ("-") instead</em>
+    <div class="input-wrap">
+        <label for="url">URL</label>
+        <input type="text" name="url" id="url" data-param="param__URL" onchange="paramChange(this);" placeholder="Enter Your URL">
+    </div>
+    <div class="input-wrap">
+        <label for="source">Source</label>
+        <select id="source" data-param="param__source" onchange="paramChange(this); showLocation();">
+            <option value="default">Select a Source</option>
+            <option value="sitemkt">Site Marketing</option>
+            <option value="unbounce">Unbounce</option>
+            <option value="email">Email</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="paidMedia">Paid Media (General)</option>
+            <option value="podcast">Podcast (Big Hunt Guys)</option>
+            <option value="affiliate">Affiliate</option>
+        </select>
+    </div>
+    <div class="input-wrap optionalField affiliateParams hide" id="affiliate">
+        <label for="affiliateName">Select the Specific Affiliate</label>
+        <select id="affiliateName" data-param="param__affiliateName" onchange="paramChange(this);">
+            <option value="default">Select an Affiliate</option>
+            <option value="randy">Randy Newberg, Hunter</option>
+            <option value="remi">Remi Warren</option>
+            <option value="gritty">Brian Call</option>
+            <option value="lampers">Ryan Lampers</option>
+            <option value="pnwild">PNWild</option>
+            
+            
+        </select>
+    </div>
+    <div class="input-wrap optionalField siteMarketingParams hide" id="location">
+        <label for="sitemkt__location">Site Marketing Location</label>
+        <select id="sitemkt__loc" data-param="param__loc" onchange="paramChange(this);">
+            <option value="default">Select a Location</option>
+            <option value="heroCarousel">Homepage Hero Carousel</option>
+            <option value="homepageBanner-1">Homepage Banner 1</option>
+            <option value="homepageBanner-2">Homepage Banner 2</option>
+            <option value="articleSidebar-basic">Article Sidebar (Standard)</option>
+            <option value="articleSidebar-insider">Article Sidebar (Insider-Only)</option>
+        </select>
+    </div>
+    <div class="input-wrap">
+        <label for="bizUnit">Business Unit</label>
+        <select id="bizUnit" data-param="param__bizUnit" onchange="paramChange(this); showOtherBizUnit();">
+            <option value="default">Select a Business Unit</option>
+            <option value="ecomm">Ecommerce</option>
+            <option value="subscription">Subscriptions</option>
+            <option value="content">Content</option>
+            <option value="outdoorclass">OutdoorClass</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="input-wrap optionalField otherBizUnitParams hide" id="otherBizUnit">
+        <label for="url">Enter a Custom Business Unit</label>
+        <input type="text" name="otherBizUnit" id="otherBizUnit" data-param="param__bizUnit" onchange="paramChange(this);" placeholder="Type a Custom Business Unit...">
+    </div>
+    <div class="input-wrap">
+        <label for="campaign">Campaign</label>
+        <input type="text" name="campaign" id="campaign" data-param="param__campaign" onchange="paramChange(this);" placeholder="Enter a Custom Campaign...">
+    </div>
+</div> <!-- end user inputs -->
+
+
+
+<div class="directions accordion" id="scrollme">
+    <div class="accordion__intro">
+        <h2>How to use this tool</h2>
+    </div>
+    <div class="accordion__content">
+        <p class="disclaimer">(Note: these instructions are for a computer, not a phone or tablet)</p>
+        <ol>
+            <li>Enter the URL you will be linking to in the text box. Make sure to include any and all prefixes (i.e. <strong>https://</strong>)</li>
+            <li>Select the relevant parameters from the dropdown lists. If you select <strong>Site Marketing</strong>, and additional <strong>location</strong> parameter must be selected. Additional fields will have optional text inputs, which can be left blank if desired.</li>
+            <li>When ready, click on the <strong>Copy Full URL</strong> button to copy the complete URL, or click the <strong>Copy Parameters Only</strong> button to copy <em>only</em> the UTM parameters (the part starting with <em>?ref=</em>).</li>
+            <li>Paste your URL wherever you need and it will be trackable through our analytics platforms.</li>
+        </ol>
+
+</div>
+</div>
+
+
+</main>
+
+<script>
+    var toastMessage = document.getElementById('copySuccess');
+
+    var toastParameterMessage = document.getElementById('copyParameterSuccess');
+
+    var scrollme;
+    scrollme = document.querySelector("#scrollme");
+
+
+    function runScroll() {
+        scrollTo(document.body, scrollme.offsetTop, 300);
+    }
+
+
+    function scrollTo(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
+
+        setTimeout(function() {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop == to) return;
+            scrollTo(element, to, duration - 10);
+        }, 10);
+    }
+    
+    function toastCopySuccessShow() {
+        toastMessage.classList.add('show');
+    }
+
+    function toastParameterCopySuccessShow() {
+        toastParameterMessage.classList.add('show');
+    }
+
+
+    function closeToast() {
+        toastMessage.classList.remove('show');
+    }
+
+    function closeParameterToast() {
+        toastParameterMessage.classList.remove('show');
+    }
+
+
+
+function copyText() {
+
+    //Before we copy, we are going to select the text.
+    var text = document.getElementById('signature');
+    var selection = window.getSelection();
+    var range = document.createRange();
+
+    range.selectNodeContents(text);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    //add to clipboard.
+    document.execCommand('copy');
+
+    closeParameterToast()
+    toastCopySuccessShow();
+
+   // setTimeout(toastCopySuccessShow, 5000);
+
+}
+
+function copyParameterText() {
+
+//Before we copy, we are going to select the text.
+var parameterText = document.getElementById('allParameters');
+var parameterSelection = window.getSelection();
+var parameterRange = document.createRange();
+
+parameterRange.selectNodeContents(parameterText);
+parameterSelection.removeAllRanges();
+parameterSelection.addRange(parameterRange);
+//add to clipboard.
+document.execCommand('copy');
+
+closeToast()
+toastParameterCopySuccessShow();
+
+// setTimeout(toastCopySuccessShow, 5000);
+
+}
+
+
+
+// accordion code
+const accordions = document.querySelectorAll(".accordion");
+
+const openAccordion = (accordion) => {
+	const content = accordion.querySelector(".accordion__content");
+	accordion.classList.add("accordion__active");
+	content.style.maxHeight = content.scrollHeight + "px";
+};
+
+const closeAccordion = (accordion) => {
+	const content = accordion.querySelector(".accordion__content");
+	accordion.classList.remove("accordion__active");
+	content.style.maxHeight = null;
+};
+
+accordions.forEach((accordion) => {
+	const intro = accordion.querySelector(".accordion__intro");
+	const content = accordion.querySelector(".accordion__content");
+
+	intro.onclick = () => {
+		if (content.style.maxHeight) {
+			closeAccordion(accordion);
+		} else {
+			accordions.forEach((accordion) => closeAccordion(accordion));
+			openAccordion(accordion);
+            runScroll();
+		}
+	};
+}); // end accordion function
+
+// builder tools
+
+//source input
+var inputSource  = document.querySelector("select[id=source]"),
+    outputSource = document.getElementById("param__source");
+
+
+// optional field selectors
+    var locationSelect = document.getElementById('location'), 
+        otherBizUnitSelect = document.getElementById('otherBizUnit');
+        affiliateSelect = document.getElementById('affiliate');
+
+
+ // url input       
+    var inputURL = document.querySelector("input[name=url]"),
+    outpurURL = document.getElementById('param__url');
+
+function keydownHandlerURL() {
+  outputURL.innerHTML = this.value;
+}
+
+ // custom campaign input       
+ var inputCampaign = document.querySelector("input[name=campaign]"),
+    outputCampaign = document.getElementById('param__campaign');
+
+function keydownHandlerCampaign() {
+  outputCampaign.innerHTML = "_" + this.value;
+}
+
+// 'Other' field for business unit
+
+function keydownHandlerOBU() {
+  document.getElementById('param__bizUnit').innerHTML = this.value;
+}
+
+inputURL.addEventListener("input", keydownHandlerURL);
+
+var inputOtherBizUnit  = document.querySelector("input[id=otherBizUnit]"),
+inputBizUnit = document.querySelector("select[id=bizUnit]");
+
+function paramChange(source) {
+
+    var sourceVal = source.value;
+    var paraId = source.getAttribute('data-param');
+    var parameter = document.getElementById(paraId);
+
+    if (sourceVal != 'default') {
+        if (paraId == 'param__affiliateName' || paraId == 'param__campaign') {
+            if (sourceVal == "") {parameter.innerHTML = sourceVal;} else {parameter.innerHTML = "_" + sourceVal;} // end check if blank   
+        } else {
+        parameter.innerHTML = sourceVal;
+        } // end if / else affiliate
+
+        if (paraId == 'param__source' && sourceVal == 'affiliate') {
+            affiliateSelect.classList.remove('hide');
+            affiliateSelect.classList.add('show');
+        } else if (paraId == 'param__source' && sourceVal != 'affiliate') {
+            const affiliateListIsNotHidden = document.getElementsByClassName('affiliateParams hide');
+            if (affiliateListIsNotHidden) {
+                affiliateSelect.classList.remove('show');
+                affiliateSelect.classList.add('hide');
+                document.getElementById('param__affiliateName').innerHTML = "";
+             } // end if affiliateListIsNotHidden
+        } // end if affiliate
+
+    } else {
+        if (paraId == 'param__source') {parameter.innerHTML = 'source';} // end if source
+        else if (paraId == 'param__bizUnit') {parameter.innerHTML = 'businessUnit';}
+        else if (paraId == 'param__loc') {parameter.innerHTML = 'location';}
+    } // end if/else value default
+
+}
+
+
+function showLocation() {
+
+    var locationParamTemplate = '<span id="param__loc--wrap">_' + '<span id="param__loc">location</span>' + '</span>';
+    var placeIt = document.getElementById('signature');
+
+
+    if (inputSource.value == 'sitemkt') {
+
+        locationSelect.classList.remove('hide');
+        locationSelect.classList.add('show');
+
+        placeIt.innerHTML += locationParamTemplate;
+
+    } else {
+        const locIsNotHidden = document.getElementsByClassName('siteMarketingParams hide');
+        if (locIsNotHidden) {
+            locationSelect.classList.remove('show');
+            locationSelect.classList.add('hide');
+            document.getElementById('param__loc--wrap').remove();
+        } // end if locIsNotHidden
+    } // end else 
+
+};
+
+showLocation();
+
+
+function showOtherBizUnit() {
+
+if (inputBizUnit.value == 'other') {
+
+    otherBizUnitSelect.classList.remove('hide');
+    otherBizUnitSelect.classList.add('show');
+
+    inputOtherBizUnit.addEventListener("input", keydownHandlerOBU);
+
+
+} else {
+    const obuIsNotHidden = document.getElementsByClassName('otherBizUnitParams');
+    if (obuIsNotHidden) {
+        otherBizUnitSelect.classList.remove('show');
+        otherBizUnitSelect.classList.add('hide');
+
+        document.getElementById('param_bizUnit').innerHTML = 'businessUnit';
+            
+    } // end if obuIsNotHidden
+} // end else 
+
+};
+
+</script>
+
+</body>
+
+</html>
