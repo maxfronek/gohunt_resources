@@ -235,16 +235,26 @@
     </div>
     <div class="input-wrap optionalField affiliateParams hide" id="affiliate">
         <label for="affiliateName">Select the Specific Affiliate</label>
-        <select id="affiliateName" data-param="param__affiliateName" onchange="paramChange(this);">
+        <select id="affiliateName" data-param="param__affiliateName" onchange="paramChange(this); showOtherAffiliate();">
             <option value="default">Select an Affiliate</option>
             <option value="randy">Randy Newberg, Hunter</option>
             <option value="remi">Remi Warren</option>
             <option value="gritty">Brian Call</option>
             <option value="lampers">Ryan Lampers</option>
             <option value="pnwild">PNWild</option>
-            
-            
+            <option value="elk101">Corey Jacobsen</option>
+            <option value="jayscott">Jay Scott</option>
+            <option value="quest">Hunter McWaters</option>
+            <option value="altitude">David Brinker</option>
+            <option value="woodside">Ben O'Brien</option>
+            <option value="treeline">Mark Livesay</option>
+            <option value="rookies">Chad Ryker</option>
+            <option value="other">Other</option>
         </select>
+    </div>
+    <div class="input-wrap optionalField otherAffiliateParams hide" id="otherAffiliate">
+        <label for="url">Enter a Custom Affiliate</label>
+        <input type="text" name="otherAffiliate" id="otherAffiliateName" data-param="param__affiliate" onchange="paramChange(this);" placeholder="Type a Custom Affiliate Code...">
     </div>
     <div class="input-wrap optionalField siteMarketingParams hide" id="location">
         <label for="sitemkt__location">Site Marketing Location</label>
@@ -426,8 +436,10 @@ var inputSource  = document.querySelector("select[id=source]"),
 
 // optional field selectors
     var locationSelect = document.getElementById('location'), 
-        otherBizUnitSelect = document.getElementById('otherBizUnit');
-        affiliateSelect = document.getElementById('affiliate');
+        otherBizUnitSelect = document.getElementById('otherBizUnit'),
+        affiliateSelect = document.getElementById('affiliate'),
+        otherAffiliateSelect = document.getElementById('otherAffiliate');
+
 
 
  // url input       
@@ -456,6 +468,25 @@ inputURL.addEventListener("input", keydownHandlerURL);
 
 var inputOtherBizUnit  = document.querySelector("input[id=otherBizUnit]"),
 inputBizUnit = document.querySelector("select[id=bizUnit]");
+
+// other affiliate input
+
+var inputOtherAffiliate  = document.querySelector("input[id=otherAffiliateName]"),
+    outputOtherAffiliate = document.getElementById("param__affiliateName"),
+    inputAffiliate  = document.querySelector("select[id=affiliateName]");
+
+function keydownHandlerOtherAffiliate() {
+  document.getElementById('param__affiliateName').innerHTML = '_' + this.value;
+}
+
+inputOtherAffiliate.addEventListener("input", keydownHandlerOtherAffiliate);
+
+var inputOtherBizUnit  = document.querySelector("input[id=otherBizUnit]"),
+inputBizUnit = document.querySelector("select[id=bizUnit]");
+
+
+
+
 
 function paramChange(source) {
 
@@ -540,6 +571,25 @@ if (inputBizUnit.value == 'other') {
 } // end else 
 
 };
+
+
+
+function showOtherAffiliate() {
+
+if (inputAffiliate.value == 'other') {
+    otherAffiliateSelect.classList.remove('hide');
+    otherAffiliateSelect.classList.add('show');
+} else {
+    const otherAffiliateIsNotHidden = document.getElementsByClassName('otherAffiliateParams');
+    if (otherAffiliateIsNotHidden) {
+        otherAffiliateSelect.classList.remove('show');
+        otherAffiliateSelect.classList.add('hide');
+
+        document.getElementById('param_affiliate').innerHTML = '';
+            
+    } // end if obuIsNotHidden
+}; // end else 
+}
 
 </script>
 
