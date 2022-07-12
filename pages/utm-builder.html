@@ -193,7 +193,7 @@
   </div>    
   <div class="container email-signature-container" id="signature">
   <!-- GOHUNT Email Signature -->
-  <span id="param__URL"></span><span id="allParameters">?ref=<span id="param__source">source</span><span id="param__affiliateName"></span>_<span id="param__bizUnit">businessUnit</span><span id="param__campaign"></span></span></div>
+  <span id="param__URL"></span><span id="allParameters"><span id="param__append">?</span>ref=<span id="param__source">source</span><span id="param__affiliateName"></span>_<span id="param__bizUnit">businessUnit</span><span id="param__campaign"></span></span></div>
   
   <div class="post-container">
       <button onclick="copyText();">Copy Full URL</button>
@@ -218,6 +218,14 @@
     <div class="input-wrap">
         <label for="url">URL</label>
         <input type="text" name="url" id="url" data-param="param__URL" onchange="paramChange(this);" placeholder="Enter Your URL">
+    </div>
+    <div class="input-wrap">
+        <label for="append">UTM Start Point</label>
+        <select id="append" data-param="param__append" onchange="paramChange(this);">
+            <option value="?">? (New Reference)</option>
+            <option value="&">& (Appended Reference)</option>
+        </select>
+        <p>Select "&amp;" when you need to append UTM parameters, and "?" for new parameters</p>
     </div>
     <div class="input-wrap">
         <label for="source">Source</label>
